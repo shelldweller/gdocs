@@ -2,7 +2,7 @@ from .doc import Doc
 
 class Loader:
     '''
-    Class to load Google Docs. In order to use it gdoc must be installed with [oauth2] extras.
+    Class to load Google Docs. In order to use it gdoc must be installed with [auth] extras.
     '''
     DEFAULT_SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 
