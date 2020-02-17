@@ -6,16 +6,6 @@ class Doc:
         self._doc = doc
 
 
-    @classmethod
-    def from_id(self, doc_id):
-        pass
-
-
-    @classmethod
-    def from_url(self, url:str):
-        pass
-
-
     @property
     def text(self) -> str:
         return ''.join([text for text,_ in self])
@@ -30,6 +20,7 @@ class Doc:
 
 
     def __iter__(self):
+        # Doc content structure: https://developers.google.com/docs/api/concepts/structure
         for item in self._doc['body']['content']:
             if 'paragraph' in item:
                 for text, formatting in _paragraph(item['paragraph']):
