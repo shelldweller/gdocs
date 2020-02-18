@@ -1,4 +1,11 @@
 venv
-__pycache__
-tests/credentials
 .vscode
+
+# optional secrets for integration tests
+tests/credentials
+
+# generated
+__pycache__
+build
+dist
+*.egg-info
