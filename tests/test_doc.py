@@ -5,7 +5,10 @@ def test_text(doc_from_file):
 
 
 def test_word_count(doc_from_file):
-    assert doc_from_file('doc.json').word_count > 0
+    # In word-format.json formatting is applied at character level
+    doc = doc_from_file('word-format.json')
+    assert doc.text == 'Discerning deipnosophist\n'
+    assert doc.word_count == 2
 
 
 def test_iterator(doc_from_file):

@@ -13,10 +13,7 @@ class Doc:
 
     @property
     def word_count(self) -> int:
-        count = 0
-        for chunk in self:
-            count += len(chunk[0].split())
-        return count
+        return len(self.text.split())
 
 
     def __iter__(self):
